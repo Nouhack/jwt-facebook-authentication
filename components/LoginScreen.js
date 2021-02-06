@@ -1,28 +1,12 @@
 import Head from "next/head";
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
-import { csrfToken, signIn } from "next-auth/client";
+import { signIn } from "next-auth/client";
 import { useState } from "react";
-import axios from "axios";
 import Link from "next/link";
 
 export default function Signin() {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-
-  const SignInHandler = () => {
-    console.log("oui");
-    console.log(email);
-    console.log(password);
-    axios
-      .post("/api/auth/callback/credentials", {
-        csrfToken: csrfToken,
-        email: email,
-        password: password,
-      })
-      .then((res) => {
-        console.log("rani postit");
-      });
-  };
 
   return (
     <Container style={{ height: "100vh" }}>

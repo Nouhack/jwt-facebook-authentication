@@ -14,7 +14,6 @@ const options = {
     Providers.Credentials({
       async authorize(credentials) {
         if (verify(credentials)) {
-          console.log("ouikhou");
           // Any user object returned here will be saved in the JSON Web Token
           //user data should be taken from a db and you must not add sensetive data to user object because it's vesible
           const user = {
@@ -25,8 +24,8 @@ const options = {
           };
           return user;
         } else {
-          console.log(credentials.email);
-          console.log(credentials.password);
+          // fail to sign un and you''l be redirected the the error page
+
           return null;
         }
       },
