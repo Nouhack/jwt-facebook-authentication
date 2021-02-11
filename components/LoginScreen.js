@@ -3,6 +3,7 @@ import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { signIn } from "next-auth/client";
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Signin() {
   const [email, setemail] = useState("");
@@ -28,16 +29,23 @@ export default function Signin() {
             flexDirection: "column",
           }}
         >
-          <div style={{ width: "80%", marginBottom: "50px" }}>
-            <img
+          <div
+            style={{
+              //   width: "100%",
+              marginBottom: "50px",
+              // backgroundColor: "red",
+            }}
+          >
+            <Image
               src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg"
               alt="facebook"
-              style={{
-                height: "106px",
-                marginLeft: "-28px",
-              }}
+              height="106px"
+              width="300px"
+              // layout="fill"
             />
-            <h3>Connect with friends and the world around you on Facebook.</h3>
+            <h3 style={{ marginLeft: "30px" }}>
+              Connect with friends and the world around you on Facebook.
+            </h3>
           </div>
         </Col>
         <Col
