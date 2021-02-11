@@ -8,5 +8,9 @@ export default async (req, res) => {
   console.log("==============");
 
   const token = await jwt.getToken({ req, secret });
+  console.log("=======================");
+  console.log(token);
+  console.log("=======================");
+
   res.send(JSON.stringify(token, null, 2));
 };
