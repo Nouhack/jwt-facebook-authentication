@@ -2,6 +2,7 @@ import { signOut } from "next-auth/client";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
 //import icons
 import {
   faHome,
@@ -37,13 +38,13 @@ export default function Private({ data }) {
             <div
               style={{ height: "100%", display: "flex", flexDirection: "row" }}
             >
-              <img
-                src="https://mesrenaelyoum.com.au/wp-content/uploads/2020/11/1024px-Facebook_Logo_2019.png"
+              <Image
+                src="/logo.png"
                 alt="none"
+                height="100%"
+                width="100%"
                 style={{
-                  height: "100%",
                   cursor: "pointer",
-                  padding: "5px",
                 }}
               />
               <input
@@ -132,9 +133,9 @@ export default function Private({ data }) {
               }}
             >
               <img
+                width={40}
+                height={40}
                 style={{
-                  width: "40px",
-                  height: "40px",
                   borderRadius: "50px",
                   //  border: "1px solid grey",
                   objectFit: "cover",
@@ -183,10 +184,7 @@ export default function Private({ data }) {
                 </Link>
               </h4>
 
-              <img
-                src="https://www.facebook.com/images/comet/dbl_qp/comet_aswitch.png"
-                alt="none"
-              />
+              <Image width="100%" height="100%" src="/example.png" alt="none" />
               {/* <button onClick={() => signOut()}>GO OUT</button>*/}
             </div>
           </Col>
