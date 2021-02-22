@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) uses [nextAuth](https://next-auth.js.org/) for Credentials authentication
+## About jwt-facebook-authentication Project
+This project is a json web token Authentication implementation for [Next.js](https://nextjs.org/) app using [nextAuth](https://next-auth.js.org/) solution for Credentials authentication
+
 ## ScreenShots
 login page:
 ![](screenshots/login.png)
